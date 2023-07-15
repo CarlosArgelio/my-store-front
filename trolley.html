@@ -120,7 +120,7 @@
         <div class="my-order-content">
             <div class="shopping-cart">
                 <figure>
-                    <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                    <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" class="close-btn">
                 </figure>
                 <p>Bike</p>
                 <p>$30,00</p>
@@ -129,7 +129,7 @@
 
             <div class="shopping-cart">
                 <figure>
-                    <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                    <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" class="close-btn">
                 </figure>
                 <p>Bike</p>
                 <p>$30,00</p>
@@ -138,7 +138,7 @@
 
             <div class="shopping-cart">
                 <figure>
-                    <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                    <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" class="close-btn">
                 </figure>
                 <p>Bike</p>
                 <p>$30,00</p>
@@ -157,5 +157,19 @@
             </button>
         </div>
     </aside>
+    <script>
+        // Obtener todos los botones de cerrar
+        const closeBtns = document.querySelectorAll('.close-btn');
+
+        // Agregar un event listener a cada botón
+        closeBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Obtener el elemento padre del botón (el div de la compra)
+                const shoppingCart = btn.parentElement;
+                // Eliminar el div de la compra
+                shoppingCart.remove();
+            });
+        });
+    </script>
 </body>
 </html>
